@@ -1,5 +1,7 @@
 # Hướng dẫn chuyển HĐH Windows và Linux từ ổ HDD sang SSD
 
+## A. Trên Windows
+
 ## I. Chuyển HĐH Windows và phân vùng dual boot sang SSD
 
 ### 1. Tải phần mềm Macrium Reflect
@@ -28,6 +30,8 @@ Chọn Source là Disk HDD chứa HĐH Windows và Destination là Disk SSD cầ
 
 - Xóa phân vùng Windows ở HDD để tránh nhầm lẫn, Delete Volume...
 
+
+## B. Trên Linux
 
 ## II. Chuyển HĐH Linux sang SSD
 
