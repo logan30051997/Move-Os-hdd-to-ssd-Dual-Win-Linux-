@@ -50,7 +50,7 @@ Thấy 2 phân vùng /dev/sda (HDD) và /dev/sdb (SSD)
 <img src="https://i.imgur.com/sIlQ1dn.png">
 
 
-- **Bước 2** : Trong đó các tùy chọn:
+- Trong đó các tùy chọn:
 
 n: Tạo phân vùng mới
 
@@ -62,11 +62,11 @@ Last sector: Vị trí lưu sector cuối (tương ứng số GB cung cấp
 
 w: Lưu lại thay đổi tạo 
 
-- **Bước 3**: sau đó confirm với hđh phân vùng được tạo bằng lệnh 
+- **Bước 2**: sau đó confirm với hđh phân vùng được tạo bằng lệnh 
 
 `partprobe /dev/sdb`
 
-- **Bước 4**: Bảng phân vùng đã được cập nhật. Chúng ta phải định dạng phân vùng của để sử dụng. Hệ thống định dạng tệp được hỗ trợ Linux là ext4. Lệnh sau để định dạng phân vùng sdbX với ext4.
+- **Bước 3**: Bảng phân vùng đã được cập nhật. Chúng ta phải định dạng phân vùng của để sử dụng. Hệ thống định dạng tệp được hỗ trợ Linux là ext4. Lệnh sau để định dạng phân vùng sdbX với ext4.
 
 ` sudo mkfs.ext4 /dev/sdbX` (X là số phân vùng vừa tạo ở trên)
 
@@ -92,9 +92,8 @@ conv=noerror,sync: Là option của command dd hỗ trợ tiếp tục chạ
 
 Ta sẽ thấy list các phân vùng và UUID của từng phần vùng
 
-```
-Vì khi ta clone phân vùng Boot của Windows ở phần I và sự dụng lệnh dd  để sao chép từ /dev/sda (disk HDD) sang /dev/sdb (disk SDD) sẽ có cùng UUID với nhau 
-```
+*Vì khi ta clone phân vùng Boot của Windows ở phần I và sự dụng lệnh dd  để sao chép từ /dev/sda (disk HDD) sang /dev/sdb (disk SDD) sẽ có cùng UUID với nhau 
+*
 
 - **Bước 2**: Kiểm tra trong `/etc/fstab` xem phân vùng boot và / đã đúng UUID ở phân vùng ỏ SSD hay chưa.
 
